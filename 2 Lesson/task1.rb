@@ -51,8 +51,8 @@ puts
 p "получить новый массив, который бы содержал в себе те буквы английского алфавита, порядковый номер которых есть в нашем массиве;"
 arr_str = Array.new
 array.each do |e| 
-  if e<26 
-	arr_str.push((64+e).chr) #65.chr    #=> "A" https://apidock.com/ruby/Integer/chr
+  if e < 26 
+	arr_str.push((64 + e).chr) #65.chr    #=> "A" https://apidock.com/ruby/Integer/chr
   end
 end
 p arr_str

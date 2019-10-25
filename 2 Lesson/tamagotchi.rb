@@ -1,7 +1,7 @@
 class Pet
 
 
-  def initialize name
+  def initialize(name)
     @name = name
     @pet_type 
     @asleep = false
@@ -14,13 +14,13 @@ class Pet
   def feed 
     puts "Вы кормите #{@name}."
     @fullnes = 10  
-    passOfTime
+    p_time
   end
   
   def walk 
     puts "Вы гуляете с питомцем #{@name} он веселится."
     @wantPlay -=1
-    passOfTime
+    p_time
   end
   
   def sleepy 
@@ -28,11 +28,11 @@ class Pet
     @asleep = true
     5.times do
       if @asleep
-        passOfTime
+        p_time
       end
 
       if @asleep
-        passOfTime
+        p_time
         puts @name + ' Хропит!! Хрр Хрр хррРр'
       end
 
@@ -48,14 +48,14 @@ class Pet
   def play
     puts "Вы щекочете и затем подбрасывете #{@name} в воздух"
     puts 'Он хихикает и облизывает ваше лицо' 
-    passOfTime
+    p_time
   end
   
   def wash
     puts "вы моете #{@name} в тазике теплой воды"
     @asleep = true
     puts 'питомец начинает дремать...'
-    passOfTime
+    p_time
     if @asleep
       @asleep = false
       puts '...но просыпается как только хотели положить его в кровать'
@@ -66,7 +66,7 @@ class Pet
   def heal
       @hp += 30
         puts "ваш любимец #{@name} имеет больной вид"
-      passOfTime
+      p_time
   end
     
   end
@@ -97,7 +97,7 @@ class Pet
     @wantPlay >= 8
   end
 
-  def passOfTime # проходит некоторое время
+  def p_time # проходит некоторое время
   
     if @fullnes > 0
       #  Переместить пищу из желудка в кишечник.
@@ -160,7 +160,8 @@ class Pet
 end
 
 p "Он родился!! =) дайте ему имя: "
-pet = Pet.new @name = gets.chomp
+pet = Pet.new(@name, gets.chomp)
+
 @pet_type = ["кролик", "щенок", "птичка", "дракончик", "котёнок", "змея"].sample
 
 
