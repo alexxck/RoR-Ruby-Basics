@@ -173,7 +173,7 @@ while true do
   print "Ведите команду: "
 
 	command = gets.chomp
-  if command == "feed" then
+  if command == "feed"
 		pet.feed
 	elsif command == "walk"
 		pet.walk
