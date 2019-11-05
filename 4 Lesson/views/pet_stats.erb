@@ -1,0 +1,9 @@
+<h1>Твой питомец</h1>
+
+<h3>Имя: <%= @stats["name"] %></h3>
+<h3>Дата рождения: <%= @stats["birthday"] %></h3>
+<h3>Уровень сытости: <%= @stats["food_level"] %></h3>
+<h3>Уровень сна: <%= @stats["sleep_level"] %></h3>
+<h3>Уровень активности: <%= @stats["activity_level"] %></h3>
+<button value="refresh" onClick="window.location.reload();">refresh</button>
+<p><a href='/edit_pet'>редактировать состояние питомца (кормить, поить, ложить спать)</a></p>
